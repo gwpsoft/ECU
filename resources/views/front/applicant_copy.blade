@@ -1,0 +1,474 @@
+@include('front/header')
+ <title>Easy Clean Up | Aanvrager</title>
+<script type="text/javascript" src="http://demos.thesoftwareguy.in/form-wizard-jquery-bootstrap/bootstrap/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://demos.thesoftwareguy.in/form-wizard-jquery-bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://demos.thesoftwareguy.in/form-wizard-jquery-bootstrap/jquery.validate.js"></script>        
+ <link href="{{ URL::asset('assets/frontend/css/datepicker.css') }}" rel="stylesheet" type="text/css" />  
+ <script type="text/javascript" src="{{ URL::asset('assets/frontend/js/bootstrap-datepicker.js') }}"></script>          
+   <style>
+   .form-row {
+    float: left;
+    line-height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+   
+   </style>       
+          
+            <div class="page-content">
+                
+                <!-- page content wrapper -->
+                <div class="page-content-wrap bg-light">
+                    <!-- page content holder -->
+                    <div class="page-content-holder no-padding">
+                        <!-- page title -->
+                        <div class="page-title">                            
+                            <h1>Aanvrager</h1>
+                            <!-- breadcrumbs -->
+                            <ul class="breadcrumb">
+                                <li ><a href="<?php echo URL:: to( '/' );?>">Home</a></li>
+                                <li class="active"><a href="<?php echo URL:: to( 'applicant' );?>">Aanvrager</a></li>
+                            </ul>               
+                            <!-- ./breadcrumbs -->
+                        </div>
+                        <!-- ./page title -->
+                    </div>
+                    <!-- ./page content holder -->
+                </div>
+                <!-- page content wrapper -->
+               <div class="page-content-wrap">                    
+                    <!-- page content holder -->
+                    <div class="page-content-holder">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                <h1 class="mb-30">Aanvraagformulier</h1>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th scope="row" colspan="4">Personalia:</th>
+</tr>
+<tr>
+<th>Achternaam</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Achternaam" name="Achternaam" id="Achternaam"></td>
+</tr>
+<tr>
+<th>Voornaam</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Adres</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Postcode</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Plaats</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>           
+             
+<tr>
+<th>Geboortedatum</th>
+<td><input type="text" class="datepicker form-control" placeholder="<?=date('Y-m-d')?>" name="Birthday" id="Birthday"></td>
+<th>BSN nummer</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Leeftijd</th>
+<td><input type="text" class="form-control" name="Voornaam" placeholder="Voornaam" id="Voornaam"></td>
+<th>Burgerlijke staat</th>
+<td><input type="radio"  name="Voornaam" id="Voornaam"> Getrouwd &nbsp;<input type="radio" name="Voornaam" id="Voornaam"> Ongehuwde</td>
+</tr>         
+<tr>
+<th>Nationaliteit</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Ziektekostenverzekering</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Bank A/c Number</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Ziektekostenverzekering nummer</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>  
+<tr>
+<th>Mobiel telefoonnummer</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Telefoonnummer (Home)</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Verkrijgbaar bij</th>
+<td><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Nederlandse taalbeheersing</th>
+<td><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+</tr> 
+<tr>
+<th>VCA-certificaat</th>
+<td ><input type="radio"  name="nee" id="Voornaam"> Yes &nbsp;<input type="radio" name="nee" id="Voornaam"> No</td>
+<th>Bereidheid om te bereiken</th>
+<td><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+</tr>    
+<tr>
+<th>Binnen 3 maanden?</th>
+<td><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+<th> Op eigen kosten? </th>
+<td> <input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+</tr>
+<tr>
+<th>Licentie</th>
+<td><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</th>
+<th>Eigen auto?</th>
+<td><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</th>
+</tr> 
+
+</tbody>
+</table>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th scope="row" colspan="4">Opleiding en kwalificaties:</th>
+</tr>
+<tr>
+<th scope="row" style="width:15px;">1</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th scope="row" colspan="4">Werkervaring:</th>
+</tr>
+<tr>
+<th scope="row">1</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>         
+<tr>
+<th scope="row">4</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+
+</tbody>
+</table>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th scope="row" colspan="8">Ervaring met het werk:</th>
+</tr>
+<tr>
+<th>Concrete finishing</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Construction Drawing Reading</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Gates Places</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+
+<th>demolition work</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Concrete Formwork</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Use of machines</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+
+<th>Isolate</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+<th>Building Scaffolding</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th>Building Deliveries</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+
+<th>Glasbewassing</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+
+<th>To lead</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+<th>Strut-and stamping</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th>Building Cleaner</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+<th>Earth work</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+
+<th>Lich carpentry</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+
+
+<th>Other activities</th>
+<td><input type="checkbox" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+
+
+</tbody>
+</table>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th  class="col-md-2">Z Z P</th>
+<td  class="col-md-10"><input type="radio"  name="nee" id="Voornaam"> Ja &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+</tr>
+<tr>
+<th class="col-md-2">tarief</th>
+<td class="col-md-10"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></td>
+</tr>
+<tr>
+<th class="col-md-2">In het bezit van</th>
+<td class="col-md-10"><input type="radio"  name="nee" id="Voornaam"> Geldige VAR &nbsp;<input type="radio" name="nee" id="Voornaam"> KvK
+<input type="radio"  name="nee" id="Voornaam"> VCA &nbsp;<input type="radio" name="nee" id="Voornaam"> nee</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th  class="col-md-2">Datum van het Interview</th>
+<td  class="col-md-4"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+<th  class="col-md-2">Onderwerp Vacature</th>
+<td  class="col-md-4"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th  class="col-md-2">uitzendbureau</th>
+<td class="col-md-10" colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th class="col-md-2">Onze Feature</th>
+<td  class="col-md-10" colspan="3"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+<tr>
+<th class="col-md-2">Begin datum</th>
+<td  class="col-md-4"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+<th class="col-md-2">eerste project</th>
+<td  class="col-md-4"><input type="text" class="form-control" placeholder="Voornaam" name="Voornaam" id="Voornaam"></th>
+</tr>
+</tbody>
+</table>
+
+<h2><u>Werknemersversverklaring</u></h2><br />
+
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th  class="col-md-2">Achternaam</th>
+<td colspan="2"><input type="text" class="form-control" placeholder="Achternaam" name="Achternaam" id="Achternaam"></td>
+</tr>
+<tr>
+<th>Nationaliteit</th>
+<td colspan="3"><input type="text" class="form-control" placeholder="Achternaam" name="Achternaam" id="Achternaam"></td>
+</tr>
+
+</tbody></table>
+ 
+<ul>
+  <li>Ondergetekende  werknemer moet altijd zijn identificatie met hen te voeren tijdens de werkuren  en dagen op verzoek te tonen. </li>
+  <li>Ondergetekende werknemer verbindt  altijd zijn / haar persoonlijke</li>
+</ul>
+<p>Beschermingsmiddelen (PBM) om bij hem tijdens de werkuren op het moment  dagen te hebben ontvangen.</p>
+<ul>
+  <li>Ondergetekende verklaart dat hij /  zij heeft geen andere voordelen in aanvulling op deze werkgever uitkeringsinstantie.</li>
+</ul>
+<p>In strijd  met artikel 1, 2 of 3 wordt de werknemer naar huis gestuurd op eigen kosten  naar de benodigde middelen en / of identificatie te verzamelen. De uren  waarvoor de werknemer was gepland worden niet beschouwd als het aantal gewerkte  uren en dus niet betaald.<br /><br />
+  <strong>De volgende documenten zijn geldige  referenties:</strong></p>
+<ul>
+  <li><strong>Nederlands nationaal paspoort</strong></li>
+  <li><strong>Vluchteling of buitenlands paspoort.</strong></li>
+  <li><strong>Diplomatiek paspoort of dienst  paspoort aan personen die profiteren van hun land naar het buitenland, een diplomatiek  paspoort of versterken dienstpaspoorten, zoals de minister van Buitenlandse  Zaken van dit land moeten deze kwestie lijkt tot acht.</strong></li>
+  <li><strong>Nederlandse identiteit: de Europese  identiteit wordt vervangen door 1 oktober 2001 door de Nederlandse identiteit.</strong></li>
+  <li><strong>EER paspoort: dit is het paspoort van  een burger van de Europese Economische Ruimte (EER). De EER bestaat uit de  landen van de Europese Unie (Nederland, België, Duitsland, Frankrijk, Italië,  Luxemburg, Denemarken, Ierland, het Verenigd Koninkrijk, Griekenland, Spanje,  Portugal, Oostenrijk, Finland en Zweden), plus Noorwegen, IJsland en  Liechtenstein. Binnen de EER is er een vrij verkeer van werknemers.  Buitenlanders uit EER hebben wel een verblijfsvergunning in Nederland knikken.  (De zogenaamde e-paper), maar geen werkvergunning.</strong></li>
+</ul>
+<p><strong><u>Werknemersverklaring</u></strong></p>
+<ul>
+  <li><strong>Vreetridelingendocument: dit is een  document waarover een vreemdeling rnoet beschikken ter vaststelling van zijn  identiteit, nationaliteit en verblijfsrechtelijke</strong> <strong>toestand.</strong></li>
+</ul>
+<p><strong>Daze worden Onderscheiden in:</strong></p>
+<ul>
+  <li><strong>Reguliere verblijfsvergunning voor  bepaalde tjid</strong></li>
+  <li><strong>Reguliere verblijfsvergunning voor  onbepaalde tijd </strong></li>
+  <li><strong>Verblijfsvergunning asiel voor  bepaalde tijd</strong></li>
+  <li><strong>Verblijfsvergunning asiel voor  onbepaalde tijd</strong></li>
+</ul>
+<p>De  immigratie- en Naturalisatiedienst (IND) neemt de beslissing om deze  vergunningen al clan niet te verlenen. De politie is verantwoordelijk voor het  verstrekken van het verblijfsdocument zeif.<br />
+  Het  rijbewijs geldt bij indiensttreding nadrukkelijk niet als geldig document. Op  het rijbewijs staat namelijk niets over de nationaliteit en verblijfsstatus.  Het voldoet wel ter verificatie van de identiteit van een werknemer nit  Nederland of nit de EER bij controles op de werkplek, maar niet voor  vreemdelingen.<br />
+  Het  sofinummer geldt niet als middel ter verificatie van de identiteit. Het is een  puur administratief gegeven en geldt noch bij de indiensttreding, noch bij  controles op de werkplek als legitimatiebewijs. Wel rnoet de werknemer het aan  zijn werkgever verstrekken bij de indiensttreding.<br />
+  Werknemer  verklaart het personeelshandboekje van Easy Clean Up BV te hebben ontvangen met  uitleg over de regels en een veiligheidsinstructie<br />
+  Handtekening,<br />
+  …………………<br />
+  Plaats:  Amsterdam<br />
+  Datum : <?=date('d/m/Y')?></p>
+  </div>
+   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 table-responsive">
+   </div>
+   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 table-responsive" align="center">
+<div style=" border:1px solid #CCC; padding:10px"><br />
+  Let op!<br />
+  Je hebt instructie gekregen over de  uit te voeren werkzaamheden. Zorg ervoor dat je deze uitvoert op de rnanier  zoals je die is verteld. Als je denkt dat het gevaarlijk is, bel je direct naar  kantoor.<br />
+  Versie 2, juli 2011 </div>
+<p>&nbsp;</p>
+</div>
+              </div>    
+                            
+                        </div>
+                   
+                    </div>
+                    <!-- ./page content holder -->
+                </div>
+<script type="text/javascript">
+  
+  jQuery().ready(function() {
+$('.datepicker').datepicker({
+				format: 'yyyy-mm-dd'
+			})
+    // validate form on keyup and submit
+    var v = jQuery("#submit_applicant").validate({
+      rules: {
+        Gender: {
+          required: true,
+          minlength: 1
+        },
+		initials: {
+          required: true,
+          minlength: 2
+        },
+        Email: {
+          required: true,
+          minlength: 2,
+          email: true,
+          maxlength: 100,
+        },
+        Firstname: {
+          required: true,
+          minlength: 6,
+          maxlength: 15,
+        },
+         Lastname: {
+          required: true,
+          minlength: 6,
+         
+        },
+        Birthday: {
+          required: true,
+          minlength: 2,
+          maxlength: 16
+        },
+        Sofinumber: {
+          required: true,
+          minlength: 2,
+          maxlength: 16
+        },
+        Startdate: {
+          required: true,
+          minlength: 2,         
+        },
+        Phone: {
+          required: true,
+          minlength: 6,
+          maxlength: 15,
+        },
+         Mobile: {
+          required: true,
+          minlength: 6,
+          maxlength: 15,
+        },
+        Id_Type: {
+          required: true,
+          minlength: 1         
+        },
+        Id_Number: {
+          required: true,
+          minlength: 1
+        },
+        Id_Expirationdate: {
+          required: true,
+          minlength: 1
+        },
+        Address: {
+          required: true,
+          minlength: 2,         
+          maxlength: 100
+        },
+        Zipcode: {
+          required: true,
+          minlength: 4,
+          maxlength: 15
+        },
+        City: {
+          required: true,
+          minlength: 6
+        },
+        Active: {
+          required: true,
+          minlength: 1
+        },
+		Employmentagency_Id: {
+          required: true,
+          minlength: 1
+        },
+        Rate: {
+          required: true,
+          minlength: 2,
+          maxlength: 20,
+        },
+         Cost: {
+          required: true,
+          minlength: 2,
+          maxlength: 15,
+        },
+        Employmentagencynote: {
+          required: true,
+          minlength: 6         
+        },
+		 Notes: {
+          required: true,
+          minlength: 6         
+        }
+
+      },
+      errorElement: "span",
+      errorClass: "help-inline-error",
+    });
+
+    $(".open1").click(function() {
+      if (v.form()) {
+        $(".frm").hide("fast");
+        $("#sf2").show("slow");
+      }
+    });
+
+    $(".open2").click(function() {
+      if (v.form()) {
+        $(".frm").hide("fast");
+        $("#sf3").show("slow");
+      }
+    });
+    
+   
+    
+    $(".back2").click(function() {
+      $(".frm").hide("fast");
+      $("#sf1").show("slow");
+    });
+
+    $(".back3").click(function() {
+      $(".frm").hide("fast");
+      $("#sf2").show("slow");
+    });
+
+  });
+</script> 
+@include('front/footer')

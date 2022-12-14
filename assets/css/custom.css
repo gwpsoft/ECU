@@ -1,0 +1,40 @@
+
+
+.inline {
+	display: inline;
+}
+.clickable{
+    cursor: pointer;   
+}
+
+.header span {
+	float:right;
+	font-size: 15px;
+}
+.icon-chevron-down > div, .content { display:none}
+
+
+
+
+/*Container*/
+
+
+.box1 {
+	position: relative;
+	width: 40%;
+	/*margin-right: auto;
+	margin-left: auto;*/
+	height: 150px;
+	margin: 5%;
+	cursor: pointer;
+}
+
+.box2 {
+	position: relative;
+	width: 40%;
+	/*margin-right: auto;
+	margin-left: auto;*/
+	height: 150px;
+	margin: 5%;
+	cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.header h2 { text-decoration:underline !important;}
+.clickable{
+    cursor: pointer;   
+}
+
+.header span {
+	float:right;
+	font-size: 15px;
+}
