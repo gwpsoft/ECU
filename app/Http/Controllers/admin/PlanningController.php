@@ -54,7 +54,7 @@ class PlanningController extends Controller
 	public function PlanningByDate ($Date=0) {
 
 		if (!empty($Date)){
-		$Date = date('Y-m-d', $Date);
+		$Date = date('Y-m-d', strtotime($Date));
 		} else {
 		$Date = date('Y-m-d');
 		}
