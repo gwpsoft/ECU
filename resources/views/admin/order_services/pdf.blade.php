@@ -59,8 +59,8 @@ function convert_day ($days) {
     <table width="100%" cellpadding="0" cellspacing="0" border="0" id="firstTable" style="border: none;">
         <tr>
         <td  align="center" style="border: none;">
-        <img src="<?php echo url();?>/assets/img/icons/logo_sm.png" style=" vertical-align:top; height:75px; margin-bottom:10px;"  />
-		<img src="<?php echo url();?>/assets/img/icons/easycleanup_logo_large.jpg" style=" vertical-align:top; width:400px; height:80px;"  /> <?php //echo url(); exit; ?>
+        <img src="http://app.easycleanup.nl/assets/img/icons/logo_sm.png" style=" vertical-align:top; height:75px; margin-bottom:10px;"  />
+		<img src="http://app.easycleanup.nl/assets/img/icons/easycleanup_logo_large.jpg" style=" vertical-align:top; width:400px; height:80px;"  /> <?php //echo url(); exit; ?>
 
         </td>
         </tr>
