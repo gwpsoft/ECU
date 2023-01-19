@@ -60,7 +60,7 @@ function convert_day ($days) {
         <tr>
         <td  align="center" style="border: none;">
         <img src="<?php echo url();?>/assets/img/icons/logo_sm.png" style=" vertical-align:top; height:75px; margin-bottom:10px;"  />
-		<img src="<?php echo url();?>/assets/img/icons/easycleanup_logo_large.jpg" style=" vertical-align:top; width:400px; height:80px;"  /> <?php echo url(); exit; ?>
+		<img src="<?php echo url();?>/assets/img/icons/easycleanup_logo_large.jpg" style=" vertical-align:top; width:400px; height:80px;"  />
 
         </td>
         </tr>
@@ -72,7 +72,7 @@ function convert_day ($days) {
         </tr>
         </table>
 
-
+<?php echo url(); exit; ?>
 	 <table width="100%" cellpadding="3" cellspacing="0" style="font-size:12px; border: none;">
 
         <tr>
