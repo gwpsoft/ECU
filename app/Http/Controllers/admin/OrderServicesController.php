@@ -658,7 +658,17 @@ class OrderServicesController extends Controller
 		//$order['project_name'];
 		$project = DB::table('tblproject')->where('Id',$Order['project_name'])->first();
 		// return view('admin.order_services.pdf', compact('Order','project'));
+		$contxt = stream_context_create([
+    'ssl' => [
+        'verify_peer' => FALSE,
+        'verify_peer_name' => FALSE,
+        'allow_self_signed'=> TRUE
+    ]
+		]);
 		$pdf= PDF::setoptions(['isHtml5ParserEnabled' => true,'isRemoteEnabled' => true]);
+		$pdf->getDomPDF()->setHttpContext($contxt);
+
+
 
 		$pdf->loadView('admin.order_services.pdf', compact('Order','project'));
 		return $pdf->download('Aanvraag_Personeel_AP-00'.$id.'.pdf');
