@@ -658,7 +658,9 @@ class OrderServicesController extends Controller
 		//$order['project_name'];
 		$project = DB::table('tblproject')->where('Id',$Order['project_name'])->first();
 		// return view('admin.order_services.pdf', compact('Order','project'));
-		$pdf= PDF::loadView('admin.order_services.pdf', compact('Order','project'));
+		$pdf= PDF::setoptions(['isHtml5ParserEnabled' => true,'isRemoteEnabled' => true]);
+
+		$pdf->loadView('admin.order_services.pdf', compact('Order','project'));
 		return $pdf->download('Aanvraag_Personeel_AP-00'.$id.'.pdf');
 	}
 
