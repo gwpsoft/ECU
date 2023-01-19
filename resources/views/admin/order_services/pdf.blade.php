@@ -125,7 +125,7 @@ function convert_day ($days) {
             <td  ><?=date('H:i',strtotime(@$Order['time']))?></td>
             </tr>
         </table>
-<?php echo url(); exit; ?>
+
          <table width="100%" cellpadding="3" cellspacing="0" border="0">
 
        <tr style="line-height:4px; vertical-align:bottom;" align="left">
@@ -193,6 +193,7 @@ function convert_day ($days) {
          </tr>
 
      </table>
+		 <?php echo url(); exit; ?>
 <div style="width:100%">
 
 <div style="clear:both"></div>
