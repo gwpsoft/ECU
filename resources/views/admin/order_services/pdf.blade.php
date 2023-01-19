@@ -193,7 +193,7 @@ function convert_day ($days) {
          </tr>
 
      </table>
-		 <?php echo url(); exit; ?>
+
 <div style="width:100%">
 
 <div style="clear:both"></div>
