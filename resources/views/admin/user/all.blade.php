@@ -120,7 +120,7 @@ div.checker span, div.radio span {
                                      <td>{{ $value->status_name }}</td>
                                      <td>
  <a data-toggle="modal" href="#modal_default_3" title="uitzicht" class="widget-icon" onclick="add_rights('<?php echo $value->id;?>')"><span class="icon-indent-right"></span></a>
- <a data-toggle="modal" href="#modal_default_4" title="Bewerk" class="widget-icon" onclick="Update('<?php echo $value->id;?>','<?php echo $value->name;?>','<?php echo $value->email;?>','<?php echo $value->groups;?>','<?php echo $value->status;?>','<?php echo $value->txt_password;?>')"><span class="icon-pencil"></span></a>
+ <a data-toggle="modal" href="#modal_default_4" title="Bewerk" class="widget-icon" onclick="Update('<?php echo $value->id;?>','<?php echo $value->name;?>','<?php echo $value->email;?>','<?php echo $value->group_name;?>','<?php echo $value->status_name;?>','<?php echo $value->txt_password;?>')"><span class="icon-pencil"></span></a>
  <a href="<?php echo URL:: to( 'admin/delete_user',$value->id); ?>" title="verwijderen" class="widget-icon" onclick="return confirm('Weet u het zeker of u deze gebruiker wilt verwijderen ?');"><span class="icon-remove"></span></a>
 
                                      </td>
