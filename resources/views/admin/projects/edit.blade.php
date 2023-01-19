@@ -1322,7 +1322,7 @@ die;*/
 				<br />
 				@include('admin/footer')</div>
 				<script src="{{ asset('assets/js/axios.min.js') }}" charset="utf-8"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUXgHEPnb8UzSo9eznT30-3Gh2r7yN8e8&callback=initAutocomplete&libraries=places&v=weekly" async></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC35SHRVQ0JebXbbRKgx85RTjZXDsDQH70&callback=initAutocomplete&libraries=places&v=weekly" async></script>
 <script>
 	// This example adds a search box to a map, using the Google Place Autocomplete
 	// feature. People can enter geographical searches. The search box will return a
@@ -1332,7 +1332,7 @@ die;*/
 	// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 	var Lat = "-33.8688";
 	var long = "151.2195";
-	axios.post('https://maps.googleapis.com/maps/api/geocode/json?address={{$Get_project->Location}}&key=AIzaSyBUXgHEPnb8UzSo9eznT30-3Gh2r7yN8e8')
+	axios.post('https://maps.googleapis.com/maps/api/geocode/json?address={{$Get_project->Location}}&key=AIzaSyC35SHRVQ0JebXbbRKgx85RTjZXDsDQH70')
 			.then(function(response) {
 				// console.log(response.data.results[0].geometry.location);
 				let position = response.data.results[0].geometry.location;

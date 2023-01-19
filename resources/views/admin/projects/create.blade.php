@@ -1922,7 +1922,7 @@ $(document).ready(function() {
              </div>
 
     {!! Form::close() !!}
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUXgHEPnb8UzSo9eznT30-3Gh2r7yN8e8&callback=initAutocomplete&libraries=places&v=weekly" async></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC35SHRVQ0JebXbbRKgx85RTjZXDsDQH70&callback=initAutocomplete&libraries=places&v=weekly" async></script>
             <script>
                 // This example adds a search box to a map, using the Google Place Autocomplete
                 // feature. People can enter geographical searches. The search box will return a
