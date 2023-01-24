@@ -970,7 +970,7 @@ class WeekcardController extends Controller
                     //	$message->to("hamzaesoft@gmail.com")
 
                     // ->cc("hamzaesoft@gmail.com")
-                    ->cc("planning.ecu@outlook.com")
+                    ->cc("planning@easycleanup.nl")
                     ->bcc("planning@easycleanup.nl")
                     // ->bcc('planning@easycleanup.nl')
                     //->bcc('planning.ecu@outlook.com','Easy Clean Up BV')
