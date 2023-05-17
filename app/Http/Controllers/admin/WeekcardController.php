@@ -627,7 +627,15 @@ class WeekcardController extends Controller
 
         //$GetTimeCards = DB::table('v_allprojects')->select('*')->where('Weeknumber',$yearWeek)->orderBy('Firstname','ASC')->get();
 
-        $Get_Projects = DB::table('v_proejcts')->select('*')->where('Weeknumber',$yearWeek)->get();
+        //$Get_Projects = DB::table('v_proejcts')->select('*')->where('Weeknumber',$yearWeek)->get();
+
+        $Get_Projects = DB::table('v_proejcts')
+        ->select('v_proejcts.*', 'file_uploads_in_weekstaats.FileName')
+        ->leftJoin('file_uploads_in_weekstaats', 'v_proejcts.Project_Id', '=', 'file_uploads_in_weekstaats.projectId')
+        ->where('v_proejcts.Weeknumber', $yearWeek)
+        ->get();
+
+        //dd($Get_Projects);
 // dd($AllEmployees);
         // foreach ($Get_Projects as $key => $project) {
         // 	$get_time[$key] =
@@ -637,7 +645,8 @@ class WeekcardController extends Controller
         //dd($GetTimeCards);
         $Comments = DB::table('tblcomments')->select('*')->orderBy('comments','ASC')->get();
 // dd($Get_Projects);
-        return View('admin.weekstate.weekstaat_projectwise',compact('AllProjects','AllEmployees','Get_Projects','Comments'));
+        //return View('admin.weekstate.weekstaat_projectwise',compact('AllProjects','AllEmployees','Get_Projects','Comments'));
+        return View('admin.weekstate.weekstaat_projectwise',compact('AllEmployees','Get_Projects','Comments'));
 
         // View('admin.weekstate.weekstaat_projectwise',compact('AllProjects','AllEmployees','Get_Projects','Comments','get_time'));
     }

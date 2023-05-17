@@ -560,6 +560,10 @@ $(document).ready(function(){
 
 
                                                 </div>
+                                                <!-- New Approved Hours Icon -->
+                        <a href="<?=URL::to('admin').'uploads/weekcard/WeekStaatAttachByCustomer/'.$Project->Weeknumber.'/'.$Project->FileName?>" title="Goedkeurde Uren" download>
+                              <img src="{{ URL::asset('assets/img/icons/pdf.png') }}" id="approved_hours" style="cursor:pointer">
+                        </a>
 
                     </div>
 
