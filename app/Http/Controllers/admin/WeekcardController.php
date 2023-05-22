@@ -156,7 +156,8 @@ class WeekcardController extends Controller
                 $attend = DB::table('tbl_pln_emp_attendence')->where('employee_id', '=', $DAT->employee_id)->where('project_id', $WEEKSTAAT->Project_Id)->where('date_in', '=', $WEEKARRAY[$i]['date'])
                     ->first();
                 $attendence[] = ["Attendence" => $attend,"day"=>$WEEKARRAY[$i]['day'],"DATE"=>$WEEKARRAY[$i]['date']];
-                $total_hours += $attend ?  $attend ->total_time :0.00;
+              //  $total_hours += $attend ?  $attend ->total_time :0.00;
+              $total_hours += $attend && is_numeric($attend->total_time) ? calculateDecimalTime($attend->total_time) : 0.00;
             }
             $Employee = DB::table('tblemployee')
                 ->select('tblemployee.Cost')
@@ -195,6 +196,18 @@ class WeekcardController extends Controller
         $weekCard = Weekcard::findOrFail($id);
 
         return View('admin.weekstate.edit', compact('AllProjects', 'GetWeekCardDetails', 'AllEmployees', 'GetTimeCards', 'Comments', 'Project_DTL', 'id', 'weekCard','EMPDATA'));
+    }
+    function calculateDecimalTime($time)
+    {
+
+    $time_parts = explode(':', $time);
+    $hours = intval($time_parts[0]);
+    $minutes = intval($time_parts[1]);
+
+    $decimal_time = $hours + ($minutes / 60);
+
+    return $decimal_time;
+
     }
 
 
@@ -603,7 +616,7 @@ class WeekcardController extends Controller
         $week_model = new Weekcard();
         //$AllProjects = $week_model->GetAllProjects();
         $AllEmployees = $week_model->GetAllEmployees();
-        return View('admin.weekstate.weekstaat_projectwise',compact('AllProjects','AllEmployees'));
+        return View('admin.weekstate.weekstaat_projectwise',compact('AllEmployees'));
     }
 
     public function ProjectsByWeek ($yearWeek = 0) {
