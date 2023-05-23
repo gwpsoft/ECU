@@ -578,6 +578,11 @@
 
                 <div style="float:right">
 
+                  @if ($FileUploadsInWeekstaat)
+                  <a href="{{ URL::asset('uploads/weekcard/WeekStaatAttachByCustomer/WeekNumber/' . $FileUploadsInWeekstaat->FileName) }}" title="Goedkeurde Uren" download>
+                    <img src="{{ URL::asset('assets/img/icons/uploads.png') }}" id="approved_hours" style="cursor:pointer; width:32px; height:32px;">
+                  </a>
+                  @endif
 
                     <a href="<?=URL:: to( 'admin' ) . '/weekcard_pdf/'.$GetWeekCardDetails->id;?>" title="Download PDF"><img class=" " src="{{ URL::asset('assets/img/icons/pdf.png') }}" id="pdf" style=" cursor:pointer"></a>  |
 

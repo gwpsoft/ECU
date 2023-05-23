@@ -7,9 +7,11 @@ use App\reports;
 use App\Projects;
 use App\Comment;
 use App\WeekCardAttachment;
+use App\FileUploadsInWeekstaat;
 use App\EmploymentAgencyWeeklyReportDetail;
 use App\Http\Requests\WeekstateRequest;
 use App\Http\Requests\DocumentWeekcardRequest;
+
 //use App\Mail\TESTMAIL;
 //use Illuminate\Support\Facades\Mail;
 use Config;
@@ -195,7 +197,12 @@ class WeekcardController extends Controller
 
         $weekCard = Weekcard::findOrFail($id);
 
-        return View('admin.weekstate.edit', compact('AllProjects', 'GetWeekCardDetails', 'AllEmployees', 'GetTimeCards', 'Comments', 'Project_DTL', 'id', 'weekCard','EMPDATA'));
+        //bon upload from mobile
+        $FileUploadsInWeekstaat = DB::table('file_uploads_in_weekstaats')->where('ProjectId', $WEEKSTAAT->Project_Id)->where('WeekNumber', $WEEKSTAAT->Weeknumber)->first();
+
+        //dd($FileUploadsInWeekstaat->FileName);
+
+        return View('admin.weekstate.edit', compact('AllProjects', 'GetWeekCardDetails', 'AllEmployees', 'GetTimeCards', 'Comments', 'Project_DTL', 'id', 'weekCard','EMPDATA','FileUploadsInWeekstaat'));
     }
     function calculateDecimalTime($time)
     {
