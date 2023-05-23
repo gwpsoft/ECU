@@ -239,14 +239,23 @@ class SupervisorController extends Controller
                 $image = $request->file('File');
                 $destinationPath = 'uploads/weekcard/WeekStaatAttachByCustomer/'.$request->weeknumber.'/';
                 $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+
+                try {
                 $image->move($destinationPath, $profileImage);
                 //$input['File'] = "$profileImage";
+
                 FileUploadsInWeekstaat::create([
                     'WeekNumber' => $request->weeknumber,
                     'ProjectId' => $request->projectId,
                     'PlanningId' => $request->planId,
                     'FileName' => $profileImage,
                 ]);
+                 } catch (\Exception $e) {
+                   return response()->json([
+                        'status' => 0,
+                        'message' => 'Failed to upload the file.'
+                    ]);
+                }
             }
 
             $year = substr($request->weeknumber, 0, 4);
