@@ -579,7 +579,7 @@
                 <div style="float:right">
 
                   @if ($FileUploadsInWeekstaat)
-                  <a href="{{ URL::asset('uploads/weekcard/WeekStaatAttachByCustomer/WeekNumber/' . $FileUploadsInWeekstaat->FileName) }}" title="Goedkeurde Uren" download>
+                  <a href="{{ URL::asset('uploads/weekcard/WeekStaatAttachByCustomer/'. $FileUploadsInWeekstaat->WeekNumber' ./' . $FileUploadsInWeekstaat->FileName) }}" title="Goedkeurde Uren" download>
                     <img src="{{ URL::asset('assets/img/icons/uploads.png') }}" id="approved_hours" style="cursor:pointer; width:32px; height:32px;">
                   </a>
                   @endif
